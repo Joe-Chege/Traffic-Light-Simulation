@@ -34,9 +34,9 @@ This project implements a traffic light simulation system using an ESP32 microco
 - **10kΩ Pull-up Resistor:** Connect between GPIO 19 and 3.3V to prevent floating values.
 
 ### Wiring Recap:
-- **Red LED →** GPIO 23 (via 220Ω resistor) → GND
-- **Yellow LED →** GPIO 22 (via 220Ω resistor) → GND
-- **Green LED →** GPIO 21 (via 220Ω resistor) → GND
+- **Red LED →** GPIO 12 (via 220Ω resistor) → GND
+- **Yellow LED →** GPIO 14 (via 220Ω resistor) → GND
+- **Green LED →** GPIO 34 (via 220Ω resistor) → GND
 - **Button →** GPIO 19 (with 10kΩ pull-up resistor)
 
 ## Software Setup
@@ -55,9 +55,9 @@ The traffic lights operate in a timed sequence:
 ### Code Implementation
 ```cpp
 // Pin Definitions
-const int redLightPin = 23;     // Red LED connected to GPIO 23
-const int yellowLightPin = 22;  // Yellow LED connected to GPIO 22
-const int greenLightPin = 21;   // Green LED connected to GPIO 21
+const int redLightPin = 12;     // Red LED connected to GPIO 12
+const int yellowLightPin = 14;  // Yellow LED connected to GPIO 14
+const int greenLightPin = 34;   // Green LED connected to GPIO 34
 const int buttonPin = 19;       // Pedestrian crossing button connected to GPIO 19
 
 // Variables to store button state
